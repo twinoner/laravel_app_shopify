@@ -1,0 +1,21 @@
+{
+    "name": "shopify-laravel-starter",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "dependencies": {
+        "@apollo/client": "^3.8.0",
+        "@tailwindcss/vite": "^4.1.18",
+        "@vitejs/plugin-vue": "^6.0.4",
+        "@vue/apollo-composable": "^4.0.0",
+        "laravel-vite-plugin": "^2.1.0",
+        "tailwindcss": "^4.1.18",
+        "vue": "^3.3.0"
+    },
+    "devDependencies": {
+        "concurrently": "^9.2.1",
+        "vite": "^7.3.1"
+    }
+}

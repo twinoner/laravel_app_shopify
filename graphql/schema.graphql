@@ -1,0 +1,23 @@
+type Shop @model {
+    id: ID!
+    shopify_domain: String!
+    installed_at: DateTime
+    created_at: DateTime
+    updated_at: DateTime
+    webhook_events: [WebhookEvent!]! @hasMany
+}
+
+type WebhookEvent @model {
+    id: ID!
+    topic: String!
+    payload: JSON!
+    processed: Boolean!
+    created_at: DateTime!
+}
+
+type Query {
+    shop(domain: String!): Shop
+        @field(resolver: "App\\GraphQL\\Resolvers\\ShopResolver@shopByDomain")
+    webhookEvents(shopId: ID!): [WebhookEvent!]!
+        @field(resolver: "App\\GraphQL\\Resolvers\\WebhookResolver@listForShop")
+}

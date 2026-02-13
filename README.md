@@ -20,7 +20,10 @@ T2: `npm run dev` -
 Open http://localhost:8090 in your browser to see the Vue app. The InstallButton component will render in the #app div with hot-reload enabled.
 
 
-Service  │ URL
-Laravel  │ http://localhost:8090
-Vite HMR │ http://localhost:5173 (proxied through Laravel)
-GraphQL  │ http://localhost:8090/graphql
+Service  URL
+
+Laravel  http://localhost:8090
+
+Vite HMR http://localhost:5173 (proxied through Laravel)
+
+GraphQL  http://localhost:8090/graphql

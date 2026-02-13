@@ -11,9 +11,20 @@ Minimal starter for a Shopify app (Laravel + Lighthouse + Vue 3).
 6. `php artisan queue:work` (or use Supervisor in production)
 7. Expose local app with ngrok and configure Shopify Partner App redirect & webhook URLs.
 
-## What is included
-- OAuth install flow
-- Webhook receiver + queued job
-- Lighthouse GraphQL schema (shop, webhook events)
-- Vue 3 admin with Apollo Client
-- Unit & Feature tests for OAuth and webhook
+## Runing
+To start both servers in the future, you can run them in separate terminals:
+T1: `php artisan serve --port=8090`
+T2: `npm run dev`
+
+Open http://localhost:8090 in your browser to see the Vue app. The InstallButton component will render in the #app div with hot-reload enabled.
+
+Running servers
+  ┌──────────┬─────────────────────────────────────────────────┐
+  │ Service  │                       URL                       │
+  ├──────────┼─────────────────────────────────────────────────┤
+  │ Laravel  │ http://localhost:8090                           │
+  ├──────────┼─────────────────────────────────────────────────┤
+  │ Vite HMR │ http://localhost:5173 (proxied through Laravel) │
+  ├──────────┼─────────────────────────────────────────────────┤
+  │ GraphQL  │ http://localhost:8090/graphql                   │
+  └──────────┴─────────────────────────────────────────────────┘

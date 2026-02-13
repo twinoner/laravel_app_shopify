@@ -18,9 +18,12 @@ T1: `php artisan serve --port=8090`
 
 T2: `npm run dev`
 
-Open http://localhost:8090 in your browser to see the Vue app. The InstallButton component will render in the #app div with hot-reload enabled.
+Or you can run `composer dev` also.
 
+Open http://localhost:8090 in your browser to see the Vue app. 
+The InstallButton component will render in the #app div with hot-reload enabled.
 
+-------
 Service  URL
 
 Laravel  http://localhost:8090
